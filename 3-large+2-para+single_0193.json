@@ -1,0 +1,173 @@
+{
+  "prompt": {
+    "EN": "Create a flow that allows the user to make a evaluation about the restaurant and they using 3 TextHeadings and between each other we will have TextArea except in the last tha there will me a RadioButtonsGroup with yes, maybe and no."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"What do you think of the food?",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "input-type":"text",
+                                    "label":"Write here",
+                                    "name":"Write_here_77a2a4",
+                                    "required":true,
+                                    "type":"TextArea"
+                                },
+                                {
+                                    "text":"And the staff",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "input-type":"text",
+                                    "label":"write here",
+                                    "name":"write_here_e3b920",
+                                    "required":true,
+                                    "type":"TextArea"
+                                },
+                                {
+                                    "text":"Would you recommend this restaurant to anyone",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "data-source":[
+                                        {
+                                            "id":"0_Yes",
+                                            "title":"Yes"
+                                        },
+                                        {
+                                            "id":"1_Maybe",
+                                            "title":"Maybe"
+                                        },
+                                        {
+                                            "id":"2_No",
+                                            "title":"No"
+                                        }
+                                    ],
+                                    "label":"Choose one",
+                                    "name":"Choose_one_541db2",
+                                    "required":true,
+                                    "type":"RadioButtonsGroup"
+                                },
+                                {
+                                    "label":"Submit",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "screen_0_Write_here_0":"${form.Write_here_77a2a4}",
+                                            "screen_0_write_here_1":"${form.write_here_e3b920}",
+                                            "screen_0_Choose_one_2":"${form.Choose_one_541db2}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Feedback"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"What do you think of the food?",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "iewrt5yutree":"text",
+                                    "lertyuytrel":"Write here",
+                                    "name":"Write_here_77a2a4",
+                                    "rwertreed":true,
+                                    "type":"TextArea"
+                                },
+                                {
+                                    "text":"And the staff",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "ityuytree":"text",
+                                    "label":"write here",
+                                    "name":"write_here_e3b920",
+                                    "required":true,
+                                    "type":"TextArea"
+                                },
+                                {
+                                    "text":"Would you recommend this restaurant to anyone",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "drtyuytre":[
+                                        {
+                                            "id":"0_Yes",
+                                            "title":"Yes"
+                                        },
+                                        {
+                                            "id":"1_Maybe",
+                                            "title":"Maybe"
+                                        },
+                                        {
+                                            "id":"2_No",
+                                            "title":"No"
+                                        }
+                                    ],
+                                    "label":"Choose one",
+                                    "name":"Choose_one_541db2",
+                                    "required":true,
+                                    "type":"RadioButtonsGroup"
+                                },
+                                {
+                                    "label":"Submit",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "erwtyuytrew":"${form.Write_here_77a2a4}",
+                                            "swertyuiuytre_1":"${form.write_here_e3b920}",
+                                            "ertyuytrewq_2":"${form.Choose_one_541db2}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Feedback"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "prompt": {
+    "EN": "Create a flow that usea a TextHeading to ask the client what does he think of AI is in one word and use a TextInput to the client write there his response."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"In one word describe what you think AI is? ",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "input-type":"text",
+                                    "label":"write here",
+                                    "name":"write_here_761c45",
+                                    "required":true,
+                                    "type":"TextInput"
+                                },
+                                {
+                                    "label":"Submit",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "screen_0_write_here_0":"${form.write_here_761c45}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Feedback"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"In one word describe what you think AI is? ",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "dghjkmjuhgfd":"text",
+                                    "label":"write here",
+                                    "name":"write_here_761c45",
+                                    "required":true,
+                                    "type":"TextInput"
+                                },
+                                {
+                                    "label":"Submit",
+                                    "fghjklkjhgfd":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "ertyuioliuuuuytr":"${form.write_here_761c45}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "dghfjk":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "fgdhjkj":true,
+                "title":"Feedback"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "prompt": {
+    "EN": "Create a flow that usea a TextHeading to ask the client what does he think of AI is TextArea to the client write there his response."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"Decribe what do you think AI is",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "label":"Write here",
+                                    "name":"Write_here_ce9ce6",
+                                    "required":true,
+                                    "type":"TextArea"
+                                },
+                                {
+                                    "label":"Submit",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "screen_0_Write_here_0":"${form.Write_here_ce9ce6}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Feedback"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"Decribe what do you think AI is",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "label":"Write here",
+                                    "naaerstdfyugihljo":"Write_here_ce9ce6",
+                                    "required":true,
+                                    "type":"TextArea"
+                                },
+                                {
+                                    "label":"Submit",
+                                    "ASDFGHJKLÇº":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "ASDFGHJKJ":"${form.Write_here_ce9ce6}"
+                                        }
+                                    },
+                                    "tUYGTRFDWRe":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Feedback"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ]
+}

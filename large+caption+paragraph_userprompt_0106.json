@@ -1,0 +1,105 @@
+{
+  "prompt": {
+    "EN": "Create a flow titled 'English Question'. Use a TextHeading for the prompt and a TextCaption to explain the habits, then let the user respond with a long-form text box."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"Written Question",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "text":"How would you describe the perfect morning routine, and what specific habits do you think are most important for setting a positive tone for the rest of your day?",
+                                    "type":"TextCaption"
+                                },
+                                {
+                                    "label":"Write here",
+                                    "name":"Write_here_81073c",
+                                    "required":true,
+                                    "type":"TextArea"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "screen_0_Write_here_0":"${form.Write_here_81073c}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"English Question"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "fghfds":[
+                        {
+                            "children":[
+                                {
+                                    "text":"Written Question",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "text":"How would you describe the perfect morning routine, and what specific habits do you think are most important for setting a positive tone for the rest of your day?",
+                                    "type":"TextCaption"
+                                },
+                                {
+                                    "label":"Write here",
+                                    "name":"Write_here_81073c",
+                                    "required":true,
+                                    "type":"TextArea"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "asdgfhdes":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "jhgfdsdfg":"${form.Write_here_81073c}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"English Question"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ]
+}
