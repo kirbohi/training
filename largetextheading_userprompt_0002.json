@@ -1,0 +1,77 @@
+{
+  "prompt": {
+    "EN": "Need a flow called Hello. Start it off with a Good morning header."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+      "screens":[
+      {"data":{},
+      "id":"RECOMMEND",
+      "layout":{
+        "children":[
+              {  
+                  "children":[
+                  {
+                      "type":"TextHeading",
+                      "text":"Good morning"
+                  },
+                  {
+                      "label":"Continue",
+                      "on-click-action":{
+                          "name":"complete",
+                          "payload":{}
+                      },
+                      "type":"Footer"
+                  }
+                  ],
+                  "name":"flow_path",
+                  "type":"Form"
+              }
+              ],
+              "type":"SingleColumnLayout"},
+              "terminal":true,
+              "title":"Hello"
+          }
+      ],
+      "version":"7.3"
+      }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+      "screens":[
+      {"data":{},
+      "id":"RECOMMEND",
+      "layout":{
+        "children":[
+              {  
+                  "children":[
+                  {
+                      "type":"textheading",
+                      "text":"Good morning"
+                  },
+                  {
+                      "label":"Continue",
+                      "on-click-action":{
+                          "name":"complete",
+                          "payload":{}
+                      },
+                      "type":"Footer"
+                  }
+                  ],
+                  "naem":"flow-path",
+                  "type":"Form"
+              }
+              ],
+              "type":"SingleColumnLayout"},
+              "terminal":true,
+              "title":"Hello"
+          }
+      ],
+      "version":"7.3"
+      }
+    }
+  ]
+}

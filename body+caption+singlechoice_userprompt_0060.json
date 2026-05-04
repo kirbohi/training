@@ -1,0 +1,125 @@
+{
+  "prompt": {
+    "EN": "Hey, I need a flow that asks, 'Would you recommend us to a friend?' Put that in a body and then add a little caption underneath it."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"Would you recommend us to a friend?",
+                                    "type":"TextBody"
+                                },
+                                {
+                                    "text":"(This data will  be use to evaluate our service)",
+                                    "type":"TextCaption"
+                                },
+                                {
+                                    "data-source":[
+                                        {
+                                            "id":"0_Yes",
+                                            "title":"Yes"
+                                        },
+                                        {
+                                            "id":"1_No",
+                                            "title":"No"
+                                        }
+                                    ],
+                                    "label":"Choose one of the bellow",
+                                    "name":"Choose_one_of_the_bellow_02830d",
+                                    "required":true,
+                                    "type":"RadioButtonsGroup"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "screen_0_Choose_one_of_the_bellow_0":"${form.Choose_one_of_the_bellow_02830d}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Feedback"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "sdfg":{},
+                "id":"RECOMMEND",
+                "dfdsafs":{
+                    "children":[
+                        {
+                            "cgfdgf":[
+                                {
+                                    "text":"Would you recommend us to a friend?",
+                                    "tgfdgfd":"TextBody"
+                                },
+                                {
+                                    "text":"(This data will  be use to evaluate our service)",
+                                    "type":"TextCaption"
+                                },
+                                {
+                                    "dsfdgdsce":[
+                                        {
+                                            "id":"0_Yes",
+                                            "title":"Yes"
+                                        },
+                                        {
+                                            "id":"1_No",
+                                            "title":"No"
+                                        }
+                                    ],
+                                    "label":"Choose one of the bellow",
+                                    "name":"Choose_one_of_the_bellow_02830d",
+                                    "required":true,
+                                    "type":"RadioButtonsGroup"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "dsfghgfd":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "sdsfddfgfdff":"${form.Choose_one_of_the_bellow_02830d}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "sadfg":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Feedback"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ]
+}

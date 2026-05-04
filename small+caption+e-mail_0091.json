@@ -1,0 +1,107 @@
+{
+  "prompt": {
+    "EN": "Create a flow to insert your e-mail in TextInput and we will use TextSubheading and TextCaption."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"Newsletter",
+                                    "type":"TextSubheading"
+                                },
+                                {
+                                    "text":"Insert your e-mail to receive our news throught the e-mail.",
+                                    "type":"TextCaption"
+                                },
+                                {
+                                    "input-type":"email",
+                                    "label":"E-mail",
+                                    "name":"Email_c3315a",
+                                    "required":true,
+                                    "type":"TextInput"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "screen_0_Email_0":"${form.Email_c3315a}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Feedback"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"Newsletter",
+                                    "type":"TextSubheading"
+                                },
+                                {
+                                    "gfdsasdfgh":"Insert your e-mail to receive our news throught the e-mail.",
+                                    "type":"TextCaption"
+                                },
+                                {
+                                    "hgfdsdfghj":"email",
+                                    "label":"E-mail",
+                                    "name":"Email_c3315a",
+                                    "hgfds":true,
+                                    "type":"TextInput"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "kjhgfd":"${form.Email_c3315a}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Feedback"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ]
+}

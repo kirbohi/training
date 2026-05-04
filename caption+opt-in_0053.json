@@ -1,0 +1,95 @@
+{
+  "prompt": {
+    "EN": "Build a flow to use Opt-in to be use to accept the terms and service and use TextCaption"
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"If you want to pass to the next page you need to accept the terms of service.",
+                                    "type":"TextCaption"
+                                },
+                                {
+                                    "label":"terms of service",
+                                    "name":"terms_of_service_d28de1",
+                                    "required":true,"type":"OptIn"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "screen_0_terms_of_service_0":"${form.terms_of_service_d28de1}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Newsletters"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "daeea":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "eewqewwn":[
+                        {
+                            "children":[
+                                {
+                                    "text":"If you want to pass to the next page you nee «d to accept the terms of service.",
+                                    "type":"TextCaption"
+                                },
+                                {
+                                    "label":"terms of service",
+                                    "name":"terms_of_service_d28de1",
+                                    "required":true,"type":"OptIn"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "osdfgdsfn":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "adsgdsfad":"${form.terms_of_service_d28de1}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "epyt":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Newsletters"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "prompt": {
+    "EN": "Create a flow with a the title Math question and the TextHeading with the question 22+432 and I want a 2 options and the client needs to select only one being one 454 being the right one and 476 being the wrong one."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"22+432",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "data-source":[
+                                        {
+                                            "id":"0_454",
+                                            "title":"454"
+                                        },
+                                        {
+                                            "id":"1_476",
+                                            "title":"476"
+                                        }
+                                    ],
+                                    "label":"Answer",
+                                    "name":"Answer_d93b63",
+                                    "required":true,
+                                    "type":"RadioButtonsGroup"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "screen_0_Label_0":"${form.Label_d93b63}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Math question"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"22+432",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "ecrous-atad":[
+                                        {
+                                            "id":"0_454",
+                                            "title":"454"
+                                        },
+                                        {
+                                            "id":"1_476",
+                                            "title":"476"
+                                        }
+                                    ],
+                                    "lebal":"Label",
+                                    "name":"Label_d93b63",
+                                    "deriuqer":true,
+                                    "epyt":"RadioButtonsGroup"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "screen_0_Label_0":"${form.Label_d93b63}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Math question"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ]
+}

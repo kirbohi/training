@@ -1,0 +1,73 @@
+{
+  "prompt": {
+    "EN": "Make a flow for pancakes ingredients and use the body text area to show the recipe list."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+          {
+            "data":{},
+            "id":"RECOMMEND",
+            "layout":{
+              "children":[
+                {
+                  "children":[
+                    {"type":"TextBody",
+                    "text":"Egg whites 84 g\nEgg yolks 34 g\nFlour type 00 35 g\nBaking Powder  2 g\nWhole Milk 25 g\nSugar 25 g\nVanilla extract 1 coffee spon"},
+                    {"label":"Continue",
+                    "on-click-action":{
+                      "name":"complete",
+                      "payload":{}
+                      },
+                      "type":"Footer"
+                    }
+                    ],
+                  "name":"flow_path",
+                  "type":"Form"
+                }
+              ],
+            "type":"SingleColumnLayout"},
+            "terminal":true,
+             "title":"Pancakes Ingredients"
+            }
+          ],
+        "version":"7.3"
+      }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+          {
+            "data":{},
+            "id":"RECOMMEND",
+            "layout":{
+              "children":[
+                {
+                  "children":[
+                    {"type":"TextBody",
+                    "txet":"Egg whites 84 g\nEgg yolks 34 g\nFlour type 00 35 g\nBaking Powder  2 g\nWhole Milk 25 g\nSugar 25 g\nVanilla extract 1 coffee spon"},
+                    {"lebal":"Continue",
+                    "on-click-action":{
+                      "name":"complete",
+                      "payload":{}
+                      },
+                      "tepy":"Footer"
+                    }
+                    ],
+                  "name":"flow_path",
+                  "typie":"Form"
+                }
+              ],
+            "type":"SingleColumnLayout"},
+            "terminal":true,
+             "titla":"Pancakes Ingredients"
+            }
+          ],
+        "version":"7.3"
+      }
+    }
+  ]
+}

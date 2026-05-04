@@ -1,0 +1,77 @@
+{
+  "prompt": {
+    "EN": "Make a flow for me—call it Goodbye and use Goodnight for the subheading."
+  },
+  "ok_flows": [
+    {
+        "EN": {
+            "screens":[
+                {
+                    "data":{},
+                    "id":"RECOMMEND",
+                    "layout":{
+                        "children":[
+                            {
+                                "children":[
+                                {
+                                    "type":"TextSubheading",
+                                    "text":"Goodnight"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{"name":"complete",
+                                    "payload":{}},
+                                    "type":"Footer"
+                                }
+                                ],
+                                "name":"flow_path",
+                                "type":"Form"
+                            }
+                        ],
+                        "type":"SingleColumnLayout"
+                    },
+                        "terminal":true,
+                        "title":"Goodbye"
+                    }
+                ],
+            "version":"7.3"
+        }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+                {
+                    "data":{},
+                    "id":"RECOMMEND",
+                    "layout":{
+                        "childlem":[
+                            {
+                                "chidlren":[
+                                {
+                                    "type":"TextSubheading",
+                                    "text":"Goodnight"
+                                },
+                                {
+                                    "lebal":"Continue",
+                                    "on-click-action":{"naem":"complete",
+                                    "payload":{}},
+                                    "type":"Footer"
+                                }
+                                ],
+                                "name":"flow-path",
+                                "type":"Form"
+                            }
+                        ],
+                        "type":"SingleColumnLayout"
+                    },
+                        "terminal":true,
+                        "title":"Goodbye"
+                    }
+                ],
+            "version":"7.3"
+        }
+    }
+  ]
+}

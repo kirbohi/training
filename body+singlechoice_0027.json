@@ -1,0 +1,119 @@
+{
+  "prompt": {
+    "EN": "Create a flow that gives me in a TextBody a question about if a tree falls down if it makes sound and one answer is Yes, physics says so and the other is No, sound needs a listener."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"If a tree falls in a forest and no one is around, does it make a sound?",
+                                    "type":"TextBody"
+                                },
+                                {
+                                    "data-source":
+                                    [
+                                        {
+                                            "id":"0_Yes,_physics_says_so.",
+                                            "title":"Yes, physics says so."
+                                        },
+                                        {
+                                            "id":"1_No,_sound_needs_a_listener.",
+                                            "title":"No, sound needs a listener."
+                                        }
+                                    ],
+                                    "label":"Answer",
+                                    "name":"Answer_91ba69",
+                                    "required":true,
+                                    "type":"RadioButtonsGroup"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "screen_0_Answer_0":"${form.Answer_91ba69}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Physics question"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"If a tree falls in a forest and no one is around, does it make a sound?",
+                                    "type":"TextBody"
+                                },
+                                {
+                                    "data-source":
+                                    [
+                                        {
+                                            "id":"0_Yes,_physics_says_so.",
+                                            "title":"Yes, physics says so."
+                                        },
+                                        {
+                                            "id":"1_No,_sound_needs_a_listener.",
+                                            "title":"No, sound needs a listener."
+                                        }
+                                    ],
+                                    "lel":"Answer",
+                                    "name":"Answer_91ba69",
+                                    "reqed":true,
+                                    "type":"RadioButtonsGroup"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "lecler":{
+                                        "name":"complete",
+                                        "gugugaga":{
+                                            "screen_0_Answer_0":"${form.Answer_91ba69}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Physics question"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ]
+}

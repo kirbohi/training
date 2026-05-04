@@ -1,0 +1,89 @@
+{
+  "prompt": {
+    "EN": "Create a flow for a fluffy pancake recipe. Use a TextHeading for the name and put all the cooking steps in the TextBody."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"Fluffy Pancakes Recipe",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "type":"TextBody",
+                                    "text":"To make fluffy pancakes, first place the egg whites in a bowl and put them in the freezer until a layer of ice forms; this will take about 10 minutes. In another bowl, place the egg yolks, add the milk, and mix with a whisk. Add the vanilla extract and the sifted all-purpose flour.\n\nMix with the whisk, then sift in the baking powder and mix again.\n\nRemove the chilled egg whites from the freezer and beat on low speed, gradually adding the sugar. You should achieve a firm, stiff consistency.\n\nFold the egg whites into the yolk mixture: add a small portion first and mix vigorously, then fold in the remaining egg whites, stirring gently from the bottom up so as not to deflate them. Once all the egg whites are well incorporated and the batter is well whipped, heat a skillet over low heat.\n\nGrease with a little butter, using a paper towel to remove the excess. Cook 2 pancakes at a time, or adjust according to the size of the skillet. For each pancake, place a spoonful of batter in the skillet and add a few drops of water to the bottom, making sure it doesn’t touch the batter.\n\nImmediately cover with a lid. Cook over very low heat for 2 minutes, then remove the lid and add another spoonful of batter on top of each pancake. If there is no more water, add a few more drops as before and cover again with the lid. Let cook for another 4 minutes.\n\nAfter that time, gently flip the pancakes. Add a few more drops of water to the pan, just as you did before.\n\nOnce again, cover with a lid and let them cook for another 3–4 minutes. Transfer to a plate and continue cooking the remaining pancakes. Serve the fluffy pancakes with maple syrup, whipped cream, and fresh fruit on the side.\n"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{}
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Pancakes recipe"
+            }
+        ],
+        "version":"7.3"
+    }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "laydaaat":{
+                    "addaren":[
+                        {
+                            "chilen":[
+                                {
+                                    "text":"Fluffy Pancakes Recipe",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "type":"TextBody",
+                                    "text":"To make fluffy pancakes, first place the egg whites in a bowl and put them in the freezer until a layer of ice forms; this will take about 10 minutes. In another bowl, place the egg yolks, add the milk, and mix with a whisk. Add the vanilla extract and the sifted all-purpose flour.\n\nMix with the whisk, then sift in the baking powder and mix again.\n\nRemove the chilled egg whites from the freezer and beat on low speed, gradually adding the sugar. You should achieve a firm, stiff consistency.\n\nFold the egg whites into the yolk mixture: add a small portion first and mix vigorously, then fold in the remaining egg whites, stirring gently from the bottom up so as not to deflate them. Once all the egg whites are well incorporated and the batter is well whipped, heat a skillet over low heat.\n\nGrease with a little butter, using a paper towel to remove the excess. Cook 2 pancakes at a time, or adjust according to the size of the skillet. For each pancake, place a spoonful of batter in the skillet and add a few drops of water to the bottom, making sure it doesn’t touch the batter.\n\nImmediately cover with a lid. Cook over very low heat for 2 minutes, then remove the lid and add another spoonful of batter on top of each pancake. If there is no more water, add a few more drops as before and cover again with the lid. Let cook for another 4 minutes.\n\nAfter that time, gently flip the pancakes. Add a few more drops of water to the pan, just as you did before.\n\nOnce again, cover with a lid and let them cook for another 3–4 minutes. Transfer to a plate and continue cooking the remaining pancakes. Serve the fluffy pancakes with maple syrup, whipped cream, and fresh fruit on the side.\n"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-cassdction":{
+                                        "name":"complete",
+                                        "dsadada":{}
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "tysdda":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "teq3rrwl":true,
+                "title":"Pancakes recipe"
+            }
+        ],
+        "version":"7.3"
+    }
+    }
+  ]
+}

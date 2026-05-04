@@ -1,0 +1,89 @@
+{
+  "prompt": {
+    "EN": "Create a flow with a ""TextHeading"" saying fluffy pancakes allergies and use a ""TextCaption"" with the allergies"
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"Fluffy Pancakes allergies",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "type":"TextCaption",
+                                    "text":"It may contain milk, eggs, peanuts, tree nuts, fish, shellfish, soy, wheat, or sesame."
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{}
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Pancakes allergies"
+            }
+        ],
+        "version":"7.3"
+    }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "nerdlihc":[
+                                {
+                                    "text":"Fluffy Pancakes allergies",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "type":"TextCaption",
+                                    "text":"It may contain milk, eggs, peanuts, tree nuts, fish, shellfish, soy, wheat, or sesame."
+                                },
+                                {
+                                    "label":"Continue",
+                                    "cuayo":{
+                                        "naem":"complete",
+                                        "paoad":{}
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Pancakes ãllergies"
+            }
+        ],
+        "version":"7.3"
+    }
+    }
+  ]
+}

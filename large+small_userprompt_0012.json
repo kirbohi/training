@@ -1,0 +1,89 @@
+{
+  "prompt": {
+    "EN": "Do a simple greeting flow—put one person in a heading and the other in a subheading."
+  },
+  "ok_flows": [
+    {
+    "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"Hello how are you?",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "type":"TextSubheading",
+                                    "text":"I'm good and you?"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{}
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Simulated conversation"
+            }
+        ],
+        "version":"7.3"
+    }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "chidlren":[
+                                {
+                                    "tddt":"Hello how are you?",
+                                    "tbpo":"TextHeading"
+                                },
+                                {
+                                    "typa":"TextSubheading",
+                                    "taxt":"I'm good and you?"
+                                },
+                                {
+                                    "lebal":"Continue",
+                                    "gugaagug":{
+                                        "nema":"complete",
+                                        "pqyload":{}
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Simulated conversation"
+            }
+        ],
+        "version":"7.3"
+    }
+    }
+  ]
+}

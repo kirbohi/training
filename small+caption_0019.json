@@ -1,0 +1,89 @@
+{
+  "prompt": {
+    "EN": "Create a flow with a TextSubheading saying Fastest animals at the surfface of the earth and make a caption saying This list only includes the animals with a top speed at floor level it doesn't include speed inside water or flying."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"Fastest animals at the surfface of the earth",
+                                    "type":"TextSubheading"
+                                },
+                                {
+                                    "type":"TextCaption",
+                                    "text":"This list only includes the animals with a top speed at floor level it doesn't include speed inside water or flying"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{}
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Fastest animals"
+            }
+        ],
+        "version":"7.3"
+    }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "nerdlihc":[
+                                {
+                                    "text":"Fastest animals at the surfface of the earth",
+                                    "type":"TextSubheading"
+                                },
+                                {
+                                    "type":"TextCaption",
+                                    "text":"This list only includes the animals with a top speed at floor level it doesn't include speed inside water or flying"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "gugugaga":{
+                                        "name":"complete",
+                                        "daolyap":{}
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Fastest animals"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ]
+}

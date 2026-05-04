@@ -1,0 +1,95 @@
+{
+  "prompt": {
+    "EN": "Hey, I need a flow where the user agrees to the terms. Put a Subheader at the top and then an opt-in at the bottom for them to click."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"If you want to pass to the next page you need to accept the terms of service.",
+                                    "type":"TextSubheading"
+                                },
+                                {
+                                    "label":"terms of service",
+                                    "name":"terms_of_service_d28de1",
+                                    "required":true,"type":"OptIn"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "screen_0_terms_of_service_0":"${form.terms_of_service_d28de1}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Newsletters"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"If you want to pass to the next page you nee «d to accept the terms of service.",
+                                    "type":"TextSubheading"
+                                },
+                                {
+                                    "label":"terms of service",
+                                    "name":"terms_of_service_d28de1",
+                                    "required":true,"type":"OptIn"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "osdfgdsfn":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "adsgdsfad":"${form.terms_of_service_d28de1}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Newsletters"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ]
+}

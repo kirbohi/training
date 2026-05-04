@@ -1,0 +1,81 @@
+{
+  "prompt": {
+    "EN": "Make a flow for pancakes risks and just put a quick caption saying it may contain gluten."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "type":"TextCaption",
+                                    "text":"It may contain gluten"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{}
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Pancakes risks"
+            }
+        ],
+        "version":"7.3"
+    }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "dete":{},
+                "di":"RECOMMEND",
+                "layut":{
+                    "children":[
+                        {
+                            "chilrlen":[
+                                {
+                                    "typi":"TextCaption",
+                                    "text":"It may contain gluten"
+                                },
+                                {
+                                    "labal":"Continue",
+                                    "on-click-action":{
+                                        "neme":"complete",
+                                        "peyload":{}
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "temrinal":true,
+                "tetli":"Pancakes risks"
+            }
+        ],
+        "version":"7.3"
+    }
+    }
+  ]
+}

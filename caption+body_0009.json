@@ -1,0 +1,89 @@
+{
+  "prompt": {
+    "EN": "create a flow using ""TextBody"" that gives me the ingredients for a pancakes recipe being the ingredients this (Egg whites 84 g\nEgg yolks 34 g\nFlour type 00 35 g\nBaking Powder  2 g\nWhole Milk 25 g\nSugar 25 g\nVanilla extract 1 coffee spon) and write in the title of the flow pancakes ingredients and add a ""TextCaption"" saying 'It may contain glutten'."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+          {
+            "data":{},
+            "id":"RECOMMEND",
+            "layout":{
+              "children":[
+                {
+                  "children":[
+                    {
+                      "text":"Egg whites 84g\nEgg yolks 34 g\nFlour type 00 35 g\nBaking Powder  2 g\nWhole Milk 25 g\nSugar 25 g\nVanilla extract 1 coffee spon",
+                      "type":"TextBody"
+                    },
+                    {
+                      "type":"TextCaption",
+                      "text":"It may contain gluten"
+                    },
+                    {
+                      "label":"Continue",
+                      "on-click-action":{
+                        "name":"complete",
+                        "payload":{}
+                      },
+                      "type":"Footer"
+                    }
+                  ],
+                  "name":"flow_path",
+                  "type":"Form"
+                }
+              ],
+              "type":"SingleColumnLayout"
+            },
+            "terminal":true,
+            "title":"Pancakes Ingredients"
+          }
+        ],
+      "version":"7.3"
+    }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+          {
+            "deta":{},
+            "id":"RECOMMEND",
+            "layuut":{
+              "chilrden":[
+                {
+                  "childlen":[
+                    {
+                      "txet":"Egg whites 84g\nEgg yolks 34 g\nFlour type 00 35 g\nBaking Powder  2 g\nWhole Milk 25 g\nSugar 25 g\nVanilla extract 1 coffee spon",
+                      "tepy":"TextBody"
+                    },
+                    {
+                      "tyoe":"TextCaption",
+                      "txet":"It may contain gluten"
+                    },
+                    {
+                      "laebel":"Continue",
+                      "nananbinban":{
+                        "name":"complete",
+                        "paylod":{}
+                      },
+                      "type":"Footer"
+                    }
+                  ],
+                  "name":"flow_path",
+                  "type":"Form"
+                }
+              ],
+              "type":"SingleColumnLayout"
+            },
+            "terminal":true,
+            "title":"Pancakes Ingredients"
+          }
+        ],
+      "version":"7.3"
+    }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "prompt": {
+    "EN": "Set up a terms and service flow. Just use a TextSubheading, a TextBody underneath it, and then the opt-in at the bottom."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"You need to accept the terms and service",
+                                    "type":"TextSubheading"
+                                },
+                                {
+                                    "text":"(This data will  be use to evaluate our service)",
+                                    "type":"TextBody"
+                                },
+                                {
+                                    "label":"Terms and service",
+                                    "name":"Terms_and_service_bdc47e",
+                                    "required":true,"type":"OptIn"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "screen_0_Terms_and_service_0":"${form.Terms_and_service_bdc47e}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Feedback"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "sdfgdsa":[
+                                {
+                                    "text":"You need to accept the terms and service",
+                                    "type":"TextSubheading"
+                                },
+                                {
+                                    "text":"(This data will  be use to evaluate our service)",
+                                    "type":"TextBody"
+                                },
+                                {
+                                    "lsfdgdsl":"Terms and service",
+                                    "name":"Terms_and_service_bdc47e",
+                                    "reasdgfhged":true,"adfsghge":"OptIn"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "shgfdsa0":"${form.Terms_and_service_bdc47e}"
+                                        }
+                                    },
+                                    "tfdgdssdfg":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "tadsfge":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Feedback"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ]
+}

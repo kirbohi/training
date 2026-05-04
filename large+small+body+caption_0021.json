@@ -1,0 +1,105 @@
+{
+  "prompt": {
+    "EN": "Create a flow with the list of the fastest animals at the surface of the earth with the list consist of  only animalsfrom the surface nothing of birds of sea animals."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"Fastest animals at the surfface of the earth",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "text":"Without waiting this is the list:",
+                                    "type":"TextSubheading"
+                                },
+                                {
+                                    "text":"1. Cheetah: 120 km/h (75 mph)\n2. Pronghorn: 98 km/h (61 mph)\n3. Springbok: 88 km/h (55 mph)\n4. Quarter Horse: 88 km/h (55 mph)\n5. Wildebeest: 80 km/h (50 mph)\n6. Lion: 80 km/h (50 mph)\n7. Blackbuck: 80 km/h (50 mph)\n8. Hare: 80 km/h (50 mph)\n9. Greyhound: 74 km/h (46 mph)\n10. Ostrich: 70 km/h (43 mph)",
+                                    "type":"TextBody"
+                                },
+                                {
+                                    "type":"TextCaption",
+                                    "text":"This list only includes the animals with a top speed at floor level it doesn't include speed inside water or speed flying"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{}
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Fastest animals"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "chilnerd":[
+                                {
+                                    "text":"Fastest animals at the surfface of the earth",
+                                    "epyt":"TextHeading"
+                                },
+                                {
+                                    "text":"Without waiting this is the list:",
+                                    "type":"TextSubheading"
+                                },
+                                {
+                                    "txet":"1. Cheetah: 120 km/h (75 mph)\n2. Pronghorn: 98 km/h (61 mph)\n3. Springbok: 88 km/h (55 mph)\n4. Quarter Horse: 88 km/h (55 mph)\n5. Wildebeest: 80 km/h (50 mph)\n6. Lion: 80 km/h (50 mph)\n7. Blackbuck: 80 km/h (50 mph)\n8. Hare: 80 km/h (50 mph)\n9. Greyhound: 74 km/h (46 mph)\n10. Ostrich: 70 km/h (43 mph)",
+                                    "type":"TextBody"
+                                },
+                                {
+                                    "epyt":"TextCaption",
+                                    "text":"This list only includes the animals with a top speed at floor level it doesn't include speed inside water or speed flying"
+                                },
+                                {
+                                    "label":"Continue",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{}
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "typ":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "tite":"Fastest animals"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ]
+}
