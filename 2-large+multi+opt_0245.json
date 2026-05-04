@@ -1,0 +1,155 @@
+{
+  "prompt": {
+    "EN": "Create a flow that ask if the client want extras he wnats and its nonecessary the extras and uses CheckBoxGroup, and other for the OptIN and it's needed to to have a TextHeading."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"What options you want on your stay",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "data-source":[
+                                        {
+                                            "id":"0_Breakfast",
+                                            "title":"Breakfast"
+                                        },
+                                        {
+                                            "id":"1_Kitchen",
+                                            "title":"Kitchen"
+                                        },
+                                        {
+                                            "id":"2_TV",
+                                            "title":"TV"
+                                        },
+                                        {
+                                            "id":"3_Pool",
+                                            "title":"Pool"
+                                        }
+                                    ],
+                                    "label":"Choose the ones you want",
+                                    "name":"Choose_the_ones_you_want_82b7d8",
+                                    "required":false,
+                                    "type":"CheckboxGroup"
+                                },
+                                {
+                                    "text":"Confirmation",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "label":"Are you sure about your selection",
+                                    "name":"Are_you_sure_about_your_selection_0d601e",
+                                    "required":true,
+                                    "type":"OptIn"
+                                },
+                                {
+                                    "label":"Finish",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "screen_0_Choose_the_ones_you_want_0":"${form.Choose_the_ones_you_want_82b7d8}",
+                                            "screen_0_Are_you_sure_about_your_selection_1":"${form.Are_you_sure_about_your_selection_0d601e}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Reservation"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"What options you want on your stay",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "data-source":[
+                                        {
+                                            "id":"0_Breakfast",
+                                            "title":"Breakfast"
+                                        },
+                                        {
+                                            "id":"1_Kitchen",
+                                            "title":"Kitchen"
+                                        },
+                                        {
+                                            "id":"2_TV",
+                                            "title":"TV"
+                                        },
+                                        {
+                                            "id":"3_Pool",
+                                            "title":"Pool"
+                                        }
+                                    ],
+                                    "label":"Choose the ones you want",
+                                    "name":"Choose_the_ones_you_want_82b7d8",
+                                    "rasdfghjkred":false,
+                                    "type":"CheckboxGroup"
+                                },
+                                {
+                                    "text":"Confirmation",
+                                    "type":"TextHeading"
+                                },
+                                {
+                                    "label":"Are you sure about your selection",
+                                    "name":"Are_you_sure_about_your_selection_0d601e",
+                                    "reasdfghjkld":true,
+                                    "type":"OptIn"
+                                },
+                                {
+                                    "label":"Finish",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "screen_0_Choose_the_ones_you_want_0":"${form.Choose_the_ones_you_want_82b7d8}",
+                                            "scrasdfghjkn_1":"${form.Are_you_sure_about_your_selection_0d601e}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Reservation"
+            }
+        ],
+        "version":"7.3"
+      }
+    }
+  ]
+}

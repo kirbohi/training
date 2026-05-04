@@ -1,0 +1,623 @@
+{
+  "prompt": {
+    "EN": "Build me a two-option search tool. Computer search → ask for specs. Phone search → ask for specs. Then always ask for name and phone at the end. Thanks."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+                "version": "7.3",
+                "routing_model": {
+                    "FIRST_SCREEN": [
+                        "SECOND_SCREEN",
+                        "THIRD_SCREEN"
+                    ],
+                    "SECOND_SCREEN": [
+                        "CONTACT"
+                    ],
+                    "THIRD_SCREEN": [
+                        "CONTACT"
+                    ],
+                    "CONTACT": []
+                },
+                "screens": [
+                    {
+                        "id": "FIRST_SCREEN",
+                        "title": "Search Helper",
+                        "data": {
+                            "insurances": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "main-content": {
+                                            "type": "object",
+                                            "properties": {
+                                                "title": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "__example__": [
+                                    {
+                                        "id": "computer",
+                                        "main-content": {
+                                            "title": "Computer Searcher",
+                                            "metadata": "One way to help you search for an computer to help you remove the irrelevant options for you."
+                                        },
+                                        "on-click-action": {
+                                            "name": "data_exchange",
+                                            "payload": {
+                                                "selection": "computer"
+                                            }
+                                        }
+                                    }, 
+                                    {
+                                        "id": "telephone",
+                                        "main-content": {
+                                            "title": "Cell phone Searcher",
+                                            "metadata": "One way to help you search foa a Cell phone without any problems."
+                                        },
+                                        "on-click-action": {
+                                            "name": "data_exchange",
+                                            "payload": {
+                                                "selection": "telephone"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "layout": {
+                            "type": "SingleColumnLayout",
+                            "children": [
+                                {
+                                    "type": "NavigationList",
+                                    "name": "helper",
+                                    "list-items": "${data.helper}"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "SECOND_SCREEN",
+                        "title": "Computer Searcher",
+                        "data": {},
+                        "layout": {
+                            "type": "SingleColumnLayout",
+                            "children": [
+                                {
+                                    "type": "TextHeading",
+                                    "text": "Tell us about the specifications you want at least in your Computer"
+                                },
+                                {
+                                    "type": "Form",
+                                    "name": "computer_search_form",
+                                    "children": [
+                                        {   
+                                            "type": "Dropdown",
+                                            "name": "Computer_type",
+                                            "required": true,
+                                            "label": "Computer Type",
+                                            "data-source": [
+                                                {
+                                                    "id": "Laptop",
+                                                    "title": "Laptop"
+                                                },
+                                                {
+                                                    "id": "desktop_computer",
+                                                    "title": "Desktop Computer"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "TextInput",
+                                            "name": "price",
+                                            "input-type": "number",
+                                            "label": "Maximum price",
+                                            "required": false
+                                        },
+                                        {
+                                            "type": "TextInput",
+                                            "name": "ram",
+                                            "input-type": "number",
+                                            "label": "Gigas RAM",
+                                            "required": true
+                                        },
+                                        {
+                                            "type": "TextInput",
+                                            "name": "storage",
+                                            "label": "Storage",
+                                            "required": true
+                                        },
+                                        {
+                                            "type": "Footer",
+                                            "label": "Continue",
+                                            "on-click-action": {
+                                                "name": "navigate",
+                                                "next": {
+                                                    "name": "CONTACT",
+                                                    "type": "screen"
+                                                },
+                                                "payload": {}
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "THIRD_SCREEN",
+                        "title": "Cell phone Searcher",
+                        "data": {},
+                        "layout": {
+                            "type": "SingleColumnLayout",
+                            "children": [
+                                {
+                                    "type": "TextHeading",
+                                    "text": "Tell us about the specifications of specifications you are looking for"
+                                },
+                                {
+                                    "type": "Form",
+                                    "name": "Cell_phone_searcher_form",
+                                    "children": [
+                                        {
+                                            "type": "Dropdown",
+                                            "label": "Phone storage",
+                                            "name": "storage_type",
+                                            "required": true,
+                                            "data-source": [
+                                                {
+                                                    "id": "32 GB",
+                                                    "title": "32 GB"
+                                                },
+                                                {
+                                                    "id": "64 GB",
+                                                    "title": "64 GB"
+                                                },
+                                                {
+                                                    "id": "128 GB",
+                                                    "title": "128 GB"
+                                                },
+                                                {
+                                                    "id": "256 GB+",
+                                                    "title": "256 GB+"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Dropdown",
+                                            "label": "Phone RAM",
+                                            "name": "RAM_type",
+                                            "required": true,
+                                            "data-source": [
+                                                {
+                                                    "id": "2 GB",
+                                                    "title": "2 GB"
+                                                },
+                                                {
+                                                    "id": "4 GB",
+                                                    "title": "4 GB"
+                                                },
+                                                {
+                                                    "id": "8 GB",
+                                                    "title": "8 GB"
+                                                },
+                                                {
+                                                    "id": "16 GB+",
+                                                    "title": "16 GB+"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Dropdown",
+                                            "label": "Which brand",
+                                            "name": "brand_range",
+                                            "required": false,
+                                            "data-source": [
+                                                {
+                                                    "id": "Samsung",
+                                                    "title": "Samsung"
+                                                },
+                                                {
+                                                    "id": "Xiaomi",
+                                                    "title": "Xiaomi"
+                                                },
+                                                {
+                                                    "id": "Motorola",
+                                                    "title": "Motorola"
+                                                },
+                                                {
+                                                    "id": "Nothing",
+                                                    "title": "Nothing"
+                                                },
+                                                {
+                                                    "id": "Oppo",
+                                                    "title": "Oppo"
+                                                },
+                                                {
+                                                    "id": "Redmi",
+                                                    "title": "Redmi"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Footer",
+                                            "label": "Next",
+                                            "on-click-action": {
+                                                "name": "navigate",
+                                                "next": {
+                                                "type": "screen",
+                                                "name": "CONTACT"
+                                                },
+                                                "payload": {}
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "CONTACT",
+                        "title": "Contact details",
+                        "terminal": true,
+                        "data": {},
+                        "layout": {
+                            "type": "SingleColumnLayout",
+                            "children": [
+                                {
+                                    "type": "TextHeading",
+                                    "text": "We will send the reasearch to your number, could you fill out the form for us to have you name and number?"
+                                },
+                                {
+                                    "type": "Form",
+                                    "name": "form",
+                                    "children": [
+                                        {
+                                            "type": "TextInput",
+                                            "name": "name",
+                                            "label": "Full name",
+                                            "required": true
+                                        },
+                                        {
+                                            "type": "TextInput",
+                                            "name": "phone",
+                                            "required": true,
+                                            "label": "Phone number"
+                                        },
+                                        {
+                                            "type": "Footer",
+                                            "label": "Complete",
+                                            "on-click-action": {
+                                                "name": "complete",
+                                                    "payload": {
+                                                        "phone": "${form.phone}",
+                                                        "name": "${form.name}"
+                                                    }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+          }
+        }
+    ],
+    "ko_flows": [
+    {
+      "EN": {
+                "version": "7.3",
+                "routing_model": {
+                    "FwertyuEN": [
+                        "SECOND_SCREEN",
+                        "THIRD_SCREEN"
+                    ],
+                    "SECOND_SCREEN": [
+                        "CONTACT"
+                    ],
+                    "wertyujikN": [
+                        "CONTACT"
+                    ],
+                    "CONTACT": []
+                },
+                "screens": [
+                    {
+                        "id": "FIRST_SCREEN",
+                        "title": "Search Helper",
+                        "data": {
+                            "insurances": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "main-content": {
+                                            "type": "object",
+                                            "properties": {
+                                                "title": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "__example__": [
+                                    {
+                                        "id": "computer",
+                                        "main-content": {
+                                            "title": "Computer Searcher",
+                                            "metadata": "One way to help you search for an computer to help you remove the irrelevant options for you."
+                                        },
+                                        "on-click-action": {
+                                            "name": "data_exchange",
+                                            "payload": {
+                                                "selection": "computer"
+                                            }
+                                        }
+                                    }, 
+                                    {
+                                        "id": "telephone",
+                                        "main-content": {
+                                            "title": "Cell phone Searcher",
+                                            "metadata": "One way to help you search foa a Cell phone without any problems."
+                                        },
+                                        "wert5yuikj": {
+                                            "name": "data_exchange",
+                                            "payload": {
+                                                "selection": "telephone"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "layout": {
+                            "type": "SingleColumnLayout",
+                            "wertghyuj": [
+                                {
+                                    "type": "NavigationList",
+                                    "name": "helper",
+                                    "list-items": "${data.helper}"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "SECOND_SCREEN",
+                        "title": "Computer Searcher",
+                        "data": {},
+                        "werthyjuk": {
+                            "type": "SingleColumnLayout",
+                            "children": [
+                                {
+                                    "type": "TextSubheading",
+                                    "text": "Tell us about the specifications you want at least in your Computer"
+                                },
+                                {
+                                    "type": "Form",
+                                    "name": "computer_search_form",
+                                    "desfdrgthj": [
+                                        {   
+                                            "type": "Dropdown",
+                                            "name": "Computer_type",
+                                            "required": true,
+                                            "label": "Computer Type",
+                                            "werfgthyj": [
+                                                {
+                                                    "id": "Laptop",
+                                                    "title": "Laptop"
+                                                },
+                                                {
+                                                    "id": "desktop_computer",
+                                                    "title": "Desktop Computer"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "TextInput",
+                                            "name": "price",
+                                            "awdefsrgdthfyjgk,": "number",
+                                            "label": "Maximum price",
+                                            "required": false
+                                        },
+                                        {
+                                            "type": "TextInput",
+                                            "name": "ram",
+                                            "input-type": "number",
+                                            "label": "Gigas RAM",
+                                            "required": true
+                                        },
+                                        {
+                                            "type": "TextInput",
+                                            "name": "storage",
+                                            "label": "Storage",
+                                            "required": true
+                                        },
+                                        {
+                                            "type": "Footer",
+                                            "label": "Continue",
+                                            "wedrfgthyjhukn": {
+                                                "name": "navigate",
+                                                "next": {
+                                                    "name": "CONTACT",
+                                                    "type": "screen"
+                                                },
+                                                "payload": {}
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "THIRD_SCREEN",
+                        "title": "Cell phone Searcher",
+                        "data": {},
+                        "sadfgh": {
+                            "type": "SingleColumnLayout",
+                            "children": [
+                                {
+                                    "type": "TextSubheading",
+                                    "text": "Tell us about the specifications of specifications you are looking for"
+                                },
+                                {
+                                    "type": "Form",
+                                    "name": "Cell_phone_searcher_form",
+                                    "children": [
+                                        {
+                                            "type": "Dropdown",
+                                            "aswdsefrgth": "Phone storage",
+                                            "name": "storage_type",
+                                            "required": true,
+                                            "data-source": [
+                                                {
+                                                    "id": "32 GB",
+                                                    "title": "32 GB"
+                                                },
+                                                {
+                                                    "id": "64 GB",
+                                                    "title": "64 GB"
+                                                },
+                                                {
+                                                    "id": "128 GB",
+                                                    "title": "128 GB"
+                                                },
+                                                {
+                                                    "id": "256 GB+",
+                                                    "title": "256 GB+"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Dropdown",
+                                            "sawdfghl": "Phone RAM",
+                                            "name": "RAM_type",
+                                            "required": true,
+                                            "data-source": [
+                                                {
+                                                    "id": "2 GB",
+                                                    "title": "2 GB"
+                                                },
+                                                {
+                                                    "id": "4 GB",
+                                                    "title": "4 GB"
+                                                },
+                                                {
+                                                    "id": "8 GB",
+                                                    "title": "8 GB"
+                                                },
+                                                {
+                                                    "id": "16 GB+",
+                                                    "title": "16 GB+"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Dropdown",
+                                            "label": "Which brand",
+                                            "name": "brand_range",
+                                            "required": false,
+                                            "dsdaefghg": [
+                                                {
+                                                    "id": "Samsung",
+                                                    "title": "Samsung"
+                                                },
+                                                {
+                                                    "id": "Xiaomi",
+                                                    "title": "Xiaomi"
+                                                },
+                                                {
+                                                    "id": "Motorola",
+                                                    "title": "Motorola"
+                                                },
+                                                {
+                                                    "id": "Nothing",
+                                                    "title": "Nothing"
+                                                },
+                                                {
+                                                    "id": "Oppo",
+                                                    "title": "Oppo"
+                                                },
+                                                {
+                                                    "id": "Redmi",
+                                                    "title": "Redmi"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Footer",
+                                            "label": "Next",
+                                            "on-click-action": {
+                                                "name": "navigate",
+                                                "next": {
+                                                "type": "screen",
+                                                "name": "CONTACT"
+                                                },
+                                                "payload": {}
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "CONTACT",
+                        "title": "Contact details",
+                        "teasdfgl": true,
+                        "data": {},
+                        "layout": {
+                            "type": "SingleColumnLayout",
+                            "children": [
+                                {
+                                    "type": "TextHeading",
+                                    "text": "We will send the reasearch to your number, could you fill out the form for us to have you name and number?"
+                                },
+                                {
+                                    "type": "Form",
+                                    "name": "form",
+                                    "children": [
+                                        {
+                                            "type": "TextInput",
+                                            "name": "name",
+                                            "label": "Full name",
+                                            "reasdefghnjd": true
+                                        },
+                                        {
+                                            "type": "TextInput",
+                                            "name": "phone",
+                                            "required": true,
+                                            "label": "Phone number"
+                                        },
+                                        {
+                                            "type": "Footer",
+                                            "label": "Complete",
+                                            "sadfgh": {
+                                                "name": "complete",
+                                                    "payload": {
+                                                        "phone": "${form.phone}",
+                                                        "name": "${form.name}"
+                                                    }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+      }
+    }
+  ]
+}

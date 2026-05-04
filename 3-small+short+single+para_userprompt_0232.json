@@ -1,0 +1,161 @@
+{
+  "prompt": {
+    "EN": "Hey, I need a booking form. Put a TextSubheading at the top, followed by a TextInput for the guest count. Then, use a RadioButtonsGroup for the seating preference and a TextArea at the bottom for additional notes."
+  },
+  "ok_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "children":[
+                        {
+                            "children":[
+                                {
+                                    "text":"Reserve a table in the dining room",
+                                    "type":"TextSubheading"
+                                },
+                                {
+                                    "input-type":"text",
+                                    "label":"How many people?",
+                                    "name":"How_many_people_862b90",
+                                    "required":true,
+                                    "type":"TextInput"
+                                },
+                                {
+                                    "text":"Where do you want to stay?",
+                                    "type":"TextSubheading"
+                                },
+                                {
+                                    "data-source":[
+                                        {
+                                            "id":"0_Inside","title":"Inside"
+                                        },
+                                        {
+                                            "id":"1_Outside",
+                                            "title":"Outside"
+                                        }
+                                    ],
+                                    "label":"Place",
+                                    "name":"Place_2c8b10",
+                                    "required":true,
+                                    "type":"RadioButtonsGroup"
+                                },
+                                {
+                                    "text":"There's anything more that you want to add?",
+                                    "type":"TextSubheading"
+                                },
+                                {
+                                    "label":"if needed write here",
+                                    "name":"if_needed_write_here_fc21be",
+                                    "required":false,
+                                    "type":"TextArea"
+                                },
+                                {
+                                    "label":"Finish",
+                                    "on-click-action":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "screen_0_How_many_people_0":"${form.How_many_people_862b90}",
+                                            "screen_0_Place_1":"${form.Place_2c8b10}",
+                                            "screen_0_if_needed_write_here_2":"${form.if_needed_write_here_fc21be}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Reservation"
+            }
+        ],
+        "version":"7.3"
+     }
+    }
+  ],
+  "ko_flows": [
+    {
+      "EN": {
+        "screens":[
+            {
+                "data":{},
+                "id":"RECOMMEND",
+                "layout":{
+                    "asdrftgyhujikolpç":[
+                        {
+                            "children":[
+                                {
+                                    "text":"Reserve a table in the dining room",
+                                    "type":"TextSubheading"
+                                },
+                                {
+                                    "wqertyu":"text",
+                                    "label":"How many people?",
+                                    "name":"How_many_people_862b90",
+                                    "qwerthyju":true,
+                                    "type":"TextInput"
+                                },
+                                {
+                                    "text":"Where do you want to stay?",
+                                    "type":"TextSubheading"
+                                },
+                                {
+                                    "data-source":[
+                                        {
+                                            "id":"0_Inside","title":"Inside"
+                                        },
+                                        {
+                                            "id":"1_Outside",
+                                            "title":"Outside"
+                                        }
+                                    ],
+                                    "label":"Place",
+                                    "name":"Place_2c8b10",
+                                    "ertyuikol":true,
+                                    "type":"RadioButtonsGroup"
+                                },
+                                {
+                                    "text":"There's anything more that you want to add?",
+                                    "type":"TextSubheading"
+                                },
+                                {
+                                    "label":"if needed write here",
+                                    "name":"if_needed_write_here_fc21be",
+                                    "required":false,
+                                    "type":"TextArea"
+                                },
+                                {
+                                    "label":"Finish",
+                                    "qewre4t45yui":{
+                                        "name":"complete",
+                                        "payload":{
+                                            "screen_0_How_many_people_0":"${form.How_many_people_862b90}",
+                                            "screen_0_Place_1":"${form.Place_2c8b10}",
+                                            "we3r4t5y6ui":"${form.if_needed_write_here_fc21be}"
+                                        }
+                                    },
+                                    "type":"Footer"
+                                }
+                            ],
+                            "name":"flow_path",
+                            "type":"Form"
+                        }
+                    ],
+                    "type":"SingleColumnLayout"
+                },
+                "terminal":true,
+                "title":"Reservation"
+            }
+        ],
+        "version":"7.3"
+     }
+    }
+  ]
+}
